@@ -37,7 +37,10 @@ let g:vimfiler_edit_action = 'tabopen'
 "autocmd VimEnter * execute 'NERDTree'
 
 nnoremap <Tab>      <C-w>w
-nnoremap <S-Tab>    :bn<CR>
+nnoremap <S-Tab>    <C-w>t
+nnoremap <S-Left>   :bp<CR>
+nnoremap <S-Right>  :bn<CR>
+
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 
@@ -71,3 +74,9 @@ set tabstop=4
 set smarttab
 
 set clipboard=unnamed
+
+" Add
+set incsearch
+set noswapfile
+set nobackup
+set noundofile
