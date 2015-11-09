@@ -19,8 +19,6 @@ let g:neobundle_default_git_protocol='https'
 NeoBundleFetch 'Shougo/neobundle.vim'
 " ↓こんな感じが基本の書き方
 NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
 NeoBundle 'vim-scripts/DirDiff.vim.git'
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'scrooloose/nerdtree'
@@ -36,13 +34,12 @@ colorscheme jellybeans
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_edit_action = 'tabopen'
-"autocmd VimEnter * VimFilerTab
-"autocmd FileType vimfiler nmap <buffer> <CR> <Plug>(vimfiler_expand_or_edit)
-"autocmd FileType vimfiler map <buffer> <Tab> :tabnext<CR>
+"autocmd VimEnter * execute 'NERDTree'
 
-"map <Tab>    :tabnext<CR>
-map <Tab>    :bn<CR>
+nnoremap <Tab>      <C-w>w
+nnoremap <S-Tab>    :bn<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
 
 set title
 set hidden
