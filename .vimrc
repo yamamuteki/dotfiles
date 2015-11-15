@@ -1,6 +1,4 @@
-set number
-" set imdisable
-" neobundle settings {{{
+" neobundle のセットアップ
 if has('vim_starting')
   set nocompatible
   " neobundle をインストールしていない場合は自動インストール
@@ -12,27 +10,27 @@ if has('vim_starting')
   " runtimepath の追加は必須
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#begin(expand('~/.vim/bundle'))
-let g:neobundle_default_git_protocol='https'
 
 " neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
-NeoBundleFetch 'Shougo/neobundle.vim'
-" ↓こんな感じが基本の書き方
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'vim-scripts/DirDiff.vim.git'
-NeoBundle "ctrlpvim/ctrlp.vim"
-NeoBundle 'scrooloose/nerdtree'
+call neobundle#begin(expand('~/.vim/bundle'))
+    let g:neobundle_default_git_protocol='https'
 
-" vimrc に記述されたプラグインでインストールされていないものがないかチェックする
-NeoBundleCheck
+    " neobundle プラグイン
+    NeoBundleFetch 'Shougo/neobundle.vim'
+    NeoBundle 'nanotech/jellybeans.vim'
+    NeoBundle 'vim-scripts/DirDiff.vim.git'
+    NeoBundle "ctrlpvim/ctrlp.vim"
+    NeoBundle 'scrooloose/nerdtree'
+
+    " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
+    NeoBundleCheck
 call neobundle#end()
-filetype plugin indent on
-" どうせだから jellybeans カラースキーマを使ってみましょう
-set t_Co=256
-syntax on
-colorscheme jellybeans
 
 "autocmd VimEnter * execute 'NERDTree'
+
+" カラースキームの設定
+set t_Co=256
+colorscheme jellybeans
 
 " 表示行単位で上下移動するように
 nnoremap j gj
@@ -43,7 +41,11 @@ nnoremap <Up>   gk
 nnoremap gj j
 nnoremap gk k
 
-nnoremap <Tab>      <C-w>w
+" コマンドラインのCtrl-pとCtrl-nでフィルタ出来るように
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+"nnoremap <Tab>      <C-w>w
 nnoremap <S-Tab>    <C-w>t
 nnoremap <S-Left>   :bp<CR>
 nnoremap <S-Right>  :bn<CR>
@@ -74,10 +76,10 @@ set number
 set wildmenu
 set showcmd
 
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
-set tabstop=4
+set tabstop=2
 set smarttab
 
 set clipboard=unnamed
