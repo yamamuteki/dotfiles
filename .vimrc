@@ -32,8 +32,6 @@ set t_Co=256
 syntax on
 colorscheme jellybeans
 
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_edit_action = 'tabopen'
 "autocmd VimEnter * execute 'NERDTree'
 
 " 表示行単位で上下移動するように
