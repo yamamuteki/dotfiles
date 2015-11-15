@@ -27,6 +27,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
 call neobundle#end()
 
 "autocmd VimEnter * execute 'NERDTree'
+" 隠しファイルをデフォルトで表示させる
+let NERDTreeShowHidden=1
 
 " カラースキームの設定
 set t_Co=256
