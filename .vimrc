@@ -55,7 +55,7 @@ filetype plugin indent on
 
 syntax on
 
-set nowrap
+"set nowrap
 
 set hlsearch
 set ignorecase
