@@ -13,18 +13,20 @@ endif
 
 " neobundle#begin - neobundle#end の間に導入するプラグインを記載します。
 call neobundle#begin(expand('~/.vim/bundle'))
-    let g:neobundle_default_git_protocol='https'
-
-    " neobundle プラグイン
-    NeoBundleFetch 'Shougo/neobundle.vim'
-    NeoBundle 'nanotech/jellybeans.vim'
-    NeoBundle 'vim-scripts/DirDiff.vim.git'
-    NeoBundle "ctrlpvim/ctrlp.vim"
-    NeoBundle 'scrooloose/nerdtree'
-
-    " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
-    NeoBundleCheck
+  let g:neobundle_default_git_protocol='https'
+  " neobundle プラグイン
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundle 'nanotech/jellybeans.vim'
+  NeoBundle 'vim-scripts/DirDiff.vim.git'
+  NeoBundle "ctrlpvim/ctrlp.vim"
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'bling/vim-airline'
+  " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
+  NeoBundleCheck
 call neobundle#end()
+
+" vim-airlineのフォント設定
+"let g:airline_powerline_fonts = 1
 
 "autocmd VimEnter * execute 'NERDTree'
 " 隠しファイルをデフォルトで表示させる
