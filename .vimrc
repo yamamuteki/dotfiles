@@ -58,6 +58,12 @@ nnoremap <S-Right>  :bn<CR>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 
+" カーソルキーを封印
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+
 set title
 set hidden
 set nrformats-=octal
