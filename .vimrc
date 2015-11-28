@@ -28,6 +28,8 @@ call neobundle#end()
 
 " vim-airlineのフォント設定
 "let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 "autocmd VimEnter * execute 'NERDTree'
 " 隠しファイルをデフォルトで表示させる
@@ -109,6 +111,3 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:airline#extensions#tabline#enabled = 1
 
-if has('mac')
-  let g:airline_powerline_fonts=1
-endif
