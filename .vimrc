@@ -22,6 +22,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'bling/vim-airline'
   NeoBundle 'tpope/vim-fugitive'
+  NeoBundle 'kchmck/vim-coffee-script'
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
   NeoBundleCheck
 call neobundle#end()
