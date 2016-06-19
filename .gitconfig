@@ -1,0 +1,35 @@
+[merge]
+	tool = vimdiff
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ci = commit
+	type = cat-file -t
+	dump = cat-file -p
+	g = log --graph --oneline --decorate=full
+[core]
+	excludesfile = /Users/yamazaki/.gitignore
+	editor = vim
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = yama@muteki
+	email = yama@muteki.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
