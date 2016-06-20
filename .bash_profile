@@ -8,6 +8,8 @@ export PS1='\W $ '
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
+export XDG_CONFIG_HOME=$HOME/.config
+
 #.bashrcがあれば読み込む
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
