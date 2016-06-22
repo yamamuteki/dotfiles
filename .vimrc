@@ -21,6 +21,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle "ctrlpvim/ctrlp.vim"
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'bling/vim-airline'
+  NeoBundle 'vim-airline/vim-airline-themes'
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'tpope/vim-surround'
