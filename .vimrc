@@ -39,8 +39,16 @@ let g:airline_right_sep = ''
 let NERDTreeShowHidden=1
 
 " カラースキームの設定
-set t_Co=256
 colorscheme jellybeans
+if &term =~ "xterm-256color" || "screen-256color"
+  set t_Co=256
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+elseif &term =~ "xterm-color"
+  set t_Co=8
+  set t_Sf=[3%dm
+  set t_Sb=[4%dm
+endif
 
 " 表示行単位で上下移動するように
 nnoremap j gj
