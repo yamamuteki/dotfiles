@@ -63,8 +63,6 @@ nnoremap gk k
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-"nnoremap <Tab>      <C-w>w
-nnoremap <S-Tab>    <C-w>t
 nnoremap <S-Left>   :bp<CR>
 nnoremap <S-Right>  :bn<CR>
 
