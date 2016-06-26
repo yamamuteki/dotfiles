@@ -25,6 +25,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'tpope/vim-surround'
+  NeoBundle 'scrooloose/syntastic'
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
   NeoBundleCheck
 call neobundle#end()
@@ -49,6 +50,25 @@ elseif &term =~ "xterm-color"
   set t_Sf=[3%dm
   set t_Sb=[4%dm
 endif
+
+" syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+  \ 'active_filetypes': [],
+  \ 'passive_filetypes': [] }
+let g:syntastic_ruby_checkers = ['rubocop'] " or ['rubocop', 'mri']
+" let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_coffee_checkers = ['coffeelint']
+" let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = '❗'
+let g:syntastic_style_error_symbol = '❗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_warning_symbol = '⚠'
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
 " 表示行単位で上下移動するように
 nnoremap j gj
