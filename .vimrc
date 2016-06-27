@@ -35,9 +35,10 @@ call neobundle#end()
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
-"autocmd VimEnter * execute 'NERDTree'
-" 隠しファイルをデフォルトで表示させる
+" NERDTree
 let NERDTreeShowHidden=1
+" autocmd VimEnter * execute 'NERDTree'
+nnoremap <C-e> :NERDTreeToggle<CR>
 
 " カラースキームの設定
 colorscheme jellybeans
@@ -83,11 +84,12 @@ nnoremap gk k
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" Shift + 左右でバッファ切り替え
 nnoremap <S-Left>   :bp<CR>
 nnoremap <S-Right>  :bn<CR>
 
+" ESC連打で検索結果強調を解除
 nnoremap <ESC><ESC> :nohlsearch<CR>
-nnoremap <C-e> :NERDTreeToggle<CR>
 
 " カーソルキーを封印
 noremap <Up>    <Nop>
