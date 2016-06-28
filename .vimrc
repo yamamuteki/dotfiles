@@ -27,6 +27,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'mattn/emmet-vim'
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
   NeoBundleCheck
 call neobundle#end()
