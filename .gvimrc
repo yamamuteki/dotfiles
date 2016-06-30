@@ -1,7 +1,7 @@
 if has('win32') || has ('win64')
-	source $VIMRUNTIME/delmenu.vim
-	set langmenu=ja_jp.utf-8
-	source $VIMRUNTIME/menu.vim
+  source $VIMRUNTIME/delmenu.vim
+  set langmenu=ja_jp.utf-8
+  source $VIMRUNTIME/menu.vim
 endif
 
 if has('mac')
@@ -18,3 +18,5 @@ set guioptions-=L
 set guioptions-=b
 
 hi Comment gui=NONE
+
+set imdisable
