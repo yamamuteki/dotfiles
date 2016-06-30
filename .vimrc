@@ -26,7 +26,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'scrooloose/syntastic'
-  NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'cohama/lexima.vim'
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'tpope/vim-endwise'
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
