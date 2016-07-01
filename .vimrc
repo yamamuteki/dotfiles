@@ -149,3 +149,5 @@ set encoding=utf-8
 
 " Allow backspace key
 set backspace=indent,eol,start
+
+set cursorline
