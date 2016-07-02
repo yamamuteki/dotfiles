@@ -1,0 +1,3 @@
+bind status	C	!<git commit
+set vertical-split = vertical
+set mouse = yes
