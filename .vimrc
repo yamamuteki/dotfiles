@@ -91,9 +91,6 @@ cnoremap <C-n> <Down>
 nnoremap <S-Left>   :bp<CR>
 nnoremap <S-Right>  :bn<CR>
 
-" ESC連打で検索結果強調を解除
-nnoremap <ESC><ESC> :nohlsearch<CR>
-
 " カーソルキーを封印
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
@@ -113,7 +110,6 @@ syntax on
 
 "set nowrap
 
-set hlsearch
 set ignorecase
 set smartcase
 
@@ -150,4 +146,36 @@ set encoding=utf-8
 " Allow backspace key
 set backspace=indent,eol,start
 
+" http://qiita.com/inodev/items/4f4d5412e65c2564b273
+" カーソル行の背景色変更
 set cursorline
+" スクロールを開始する残り行数を指定
+set scrolloff=5
+" ESC連打で検索結果強調を解除
+set hlsearch
+nnoremap <ESC><ESC> :nohlsearch<CR>
+" エラービープ音の全停止
+set visualbell t_vb=
+set noerrorbells
+" 検索語が画面の真ん中に来るようにする
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+" インサートモードから抜ける時に便利なキーバインド
+inoremap <silent> jj <ESC>
+
+" ヤンクしたデータをクリップボードで使用
+set clipboard=unnamed
+
+" vimgrepやgrep した際に、cwindowしてしまう
+autocmd QuickFixCmdPost *grep* cwindow
+
+" 全角スペースの可視化
+augroup UsingJapanese
+  au!
+  autocmd VimEnter,ColorScheme * highlight def link IdeographicSpace Visual
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
