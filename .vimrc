@@ -30,6 +30,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'alvan/vim-closetag'
   NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak' } }
   " NeoBundle 'supermomonga/neocomplete-rsense.vim', { 'autoload' : { 'insert' : 1, 'filetypes': 'ruby' } }
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
