@@ -32,6 +32,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'Shougo/neocomplete.vim'
   NeoBundle 'Shougo/neosnippet'
   NeoBundle 'Shougo/neosnippet-snippets'
+  NeoBundle 'Shougo/vimshell'
   NeoBundle 'alvan/vim-closetag'
   NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak' } }
   " NeoBundle 'supermomonga/neocomplete-rsense.vim', { 'autoload' : { 'insert' : 1, 'filetypes': 'ruby' } }
