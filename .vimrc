@@ -62,6 +62,9 @@ elseif &term =~ "xterm-color"
   set t_Sb=[4%dm
 endif
 
+" DirDiff設定
+let g:DirDiffExcludes = ".git,*.class,*.o"
+
 " syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
   \ 'active_filetypes': [],
