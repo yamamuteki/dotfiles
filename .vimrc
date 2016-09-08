@@ -29,9 +29,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'cohama/lexima.vim'
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'tpope/vim-endwise'
-  NeoBundle 'Shougo/neocomplete.vim'
-  NeoBundle 'Shougo/neosnippet'
-  NeoBundle 'Shougo/neosnippet-snippets'
+  " NeoBundle 'Shougo/neocomplete.vim'
+  " NeoBundle 'Shougo/neosnippet'
+  " NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'Shougo/vimshell'
   NeoBundle 'alvan/vim-closetag'
   NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak' } }
