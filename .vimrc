@@ -289,3 +289,5 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " 自動改行をオフ
 set formatoptions=q
 
+" filenames like *.xml, *.html, *.xhtml, ...
+let g:closetag_filenames = "*.xml,*.html,*.xhtml,*.phtml,*.html.erb"
