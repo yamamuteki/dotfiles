@@ -291,3 +291,5 @@ set formatoptions=q
 
 " filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.xml,*.html,*.xhtml,*.phtml,*.html.erb"
+
+set noballooneval
