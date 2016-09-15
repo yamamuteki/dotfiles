@@ -20,3 +20,6 @@ set guioptions-=b
 hi Comment gui=NONE
 
 set imdisable
+
+set balloonexpr=
+set noballooneval
