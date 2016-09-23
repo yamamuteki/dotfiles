@@ -21,5 +21,7 @@ hi Comment gui=NONE
 
 set imdisable
 
+" Disable hover tooltips
 set balloonexpr=
 set noballooneval
+let g:netrw_nobeval = 1
