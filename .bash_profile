@@ -14,3 +14,5 @@ export XDG_CONFIG_HOME=$HOME/.config
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+export PATH="/usr/local/opt/bison/bin:$PATH"
+export PATH="/usr/local/opt/flex/bin:$PATH"
