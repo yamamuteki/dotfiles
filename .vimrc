@@ -37,6 +37,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak' } }
   " NeoBundle 'supermomonga/neocomplete-rsense.vim', { 'autoload' : { 'insert' : 1, 'filetypes': 'ruby' } }
   NeoBundle 'ngmy/vim-rubocop'
+  NeoBundle 'pangloss/vim-javascript'
+  NeoBundle 'mxw/vim-jsx'
   " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
   NeoBundleCheck
 call neobundle#end()
@@ -72,6 +74,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
   \ 'passive_filetypes': [] }
 let g:syntastic_ruby_checkers = ['rubocop'] " or ['rubocop', 'mri']
 " let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_coffee_checkers = ['coffeelint']
 " let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_auto_loc_list = 2
