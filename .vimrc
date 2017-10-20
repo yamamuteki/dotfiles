@@ -295,3 +295,6 @@ set formatoptions=q
 
 " filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.xml,*.html,*.xhtml,*.phtml,*.html.erb"
+
+" 長いテキストで重くなる現象を回避
+set synmaxcol=200
