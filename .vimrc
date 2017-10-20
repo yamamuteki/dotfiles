@@ -80,15 +80,9 @@ nnoremap gk k
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-" Shift + 左右でバッファ切り替え
-nnoremap <S-Left>   :bp<CR>
-nnoremap <S-Right>  :bn<CR>
-
-" カーソルキーを封印
-noremap <Up>    <Nop>
-noremap <Down>  <Nop>
-noremap <Left>  <Nop>
-noremap <Right> <Nop>
+" Shift + 左右でジャンプリスト移動
+nnoremap <S-Left>   <C-o>
+nnoremap <S-Right>  <C-i>
 
 set title
 set hidden
