@@ -84,6 +84,9 @@ cnoremap <C-n> <Down>
 nnoremap <S-Left>   <C-o>
 nnoremap <S-Right>  <C-i>
 
+" ジャンプリストを保存しない
+set viminfo=
+
 set title
 set hidden
 set nrformats-=octal
