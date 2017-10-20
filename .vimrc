@@ -25,7 +25,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'tpope/vim-surround'
-  NeoBundle 'scrooloose/syntastic'
+  NeoBundle 'w0rp/ale'
   NeoBundle 'cohama/lexima.vim'
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'tpope/vim-endwise'
@@ -34,7 +34,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'Shougo/vimshell'
   NeoBundle 'alvan/vim-closetag'
-  NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak' } }
   " NeoBundle 'supermomonga/neocomplete-rsense.vim', { 'autoload' : { 'insert' : 1, 'filetypes': 'ruby' } }
   NeoBundle 'ngmy/vim-rubocop'
   NeoBundle 'pangloss/vim-javascript'
@@ -68,25 +67,12 @@ endif
 " DirDiff設定
 let g:DirDiffExcludes = ".git,*.class,*.o"
 
-" syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'active_filetypes': [],
-  \ 'passive_filetypes': [] }
-let g:syntastic_ruby_checkers = ['rubocop'] " or ['rubocop', 'mri']
-" let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_coffee_checkers = ['coffeelint']
-" let g:syntastic_scss_checkers = ['scss_lint']
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = '❗'
-let g:syntastic_style_error_symbol = '❗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_warning_symbol = '⚠'
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
+" ALE
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = 'E>'
+let g:ale_sign_warning = 'W-'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
 " 表示行単位で上下移動するように
 nnoremap j gj
