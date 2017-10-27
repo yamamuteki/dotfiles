@@ -3,8 +3,8 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE="fg*:bg*:history*:cd*"
 export HISTSIZE=10000
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+alias vim='mvim -v'
+alias vi=vim
 
 source ~/homebrew/etc/bash_completion.d/git-prompt.sh
 source ~/homebrew/etc/bash_completion.d/git-completion.bash
